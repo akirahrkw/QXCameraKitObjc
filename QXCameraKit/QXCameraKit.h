@@ -6,14 +6,9 @@
 //  Copyright (c) 2014 Hirakawa Akira. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#if TARGET_OS_IPHONE
+#import <QXCameraKit/QXAPI.h>
+#import <QXCameraKit/QXAPIManager.h>
+#endif
 
-//! Project version number for QXCameraKit.
-FOUNDATION_EXPORT double QXCameraKitVersionNumber;
-
-//! Project version string for QXCameraKit.
-FOUNDATION_EXPORT const unsigned char QXCameraKitVersionString[];
-
-// In this header, you should import all the public headers of your framework using statements like #import <QXCameraKit/PublicHeader.h>
-
-
+#define QXCAMERAKIT_VERSION @"0.1.0"

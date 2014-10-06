@@ -9,15 +9,44 @@
 /* Begin PBXBuildFile section */
 		8E8B371819E1343B0053B1F1 /* QXCameraKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E8B371719E1343B0053B1F1 /* QXCameraKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8E8B372219E1343B0053B1F1 /* QXCameraKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8B372119E1343B0053B1F1 /* QXCameraKitTests.m */; };
+		8E8B373919E134450053B1F1 /* UdpRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E8B372B19E134450053B1F1 /* UdpRequest.h */; };
+		8E8B373A19E134450053B1F1 /* UdpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8B372C19E134450053B1F1 /* UdpRequest.m */; };
+		8E8B373B19E134450053B1F1 /* QXXMLParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E8B372D19E134450053B1F1 /* QXXMLParser.h */; };
+		8E8B373C19E134450053B1F1 /* QXXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8B372E19E134450053B1F1 /* QXXMLParser.m */; };
+		8E8B373D19E134450053B1F1 /* QXDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E8B372F19E134450053B1F1 /* QXDevice.h */; };
+		8E8B373E19E134450053B1F1 /* QXDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8B373019E134450053B1F1 /* QXDevice.m */; };
+		8E8B373F19E134450053B1F1 /* QXAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E8B373119E134450053B1F1 /* QXAPI.h */; };
+		8E8B374019E134450053B1F1 /* QXAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8B373219E134450053B1F1 /* QXAPI.m */; };
+		8E8B374119E134450053B1F1 /* QXAPIManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E8B373319E134450053B1F1 /* QXAPIManager.h */; };
+		8E8B374219E134450053B1F1 /* QXAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8B373419E134450053B1F1 /* QXAPIManager.m */; };
+		8E8B374319E134450053B1F1 /* QXLiveManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E8B373519E134450053B1F1 /* QXLiveManager.h */; };
+		8E8B374419E134450053B1F1 /* QXLiveManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8B373619E134450053B1F1 /* QXLiveManager.m */; };
+		8E8B374519E134450053B1F1 /* HttpAsynchronousRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E8B373719E134450053B1F1 /* HttpAsynchronousRequest.h */; };
+		8E8B374619E134450053B1F1 /* HttpAsynchronousRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8B373819E134450053B1F1 /* HttpAsynchronousRequest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8E6F633B19E2D4CC0034F076 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		8E8B371219E1343B0053B1F1 /* QXCameraKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QXCameraKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E8B371619E1343B0053B1F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E8B371719E1343B0053B1F1 /* QXCameraKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QXCameraKit.h; sourceTree = "<group>"; };
 		8E8B371D19E1343B0053B1F1 /* QXCameraKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QXCameraKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E8B372019E1343B0053B1F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E8B372119E1343B0053B1F1 /* QXCameraKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QXCameraKitTests.m; sourceTree = "<group>"; };
+		8E8B372B19E134450053B1F1 /* UdpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UdpRequest.h; sourceTree = "<group>"; };
+		8E8B372C19E134450053B1F1 /* UdpRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UdpRequest.m; sourceTree = "<group>"; };
+		8E8B372D19E134450053B1F1 /* QXXMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QXXMLParser.h; sourceTree = "<group>"; };
+		8E8B372E19E134450053B1F1 /* QXXMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QXXMLParser.m; sourceTree = "<group>"; };
+		8E8B372F19E134450053B1F1 /* QXDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QXDevice.h; sourceTree = "<group>"; };
+		8E8B373019E134450053B1F1 /* QXDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QXDevice.m; sourceTree = "<group>"; };
+		8E8B373119E134450053B1F1 /* QXAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QXAPI.h; sourceTree = "<group>"; };
+		8E8B373219E134450053B1F1 /* QXAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QXAPI.m; sourceTree = "<group>"; };
+		8E8B373319E134450053B1F1 /* QXAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QXAPIManager.h; sourceTree = "<group>"; };
+		8E8B373419E134450053B1F1 /* QXAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QXAPIManager.m; sourceTree = "<group>"; };
+		8E8B373519E134450053B1F1 /* QXLiveManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QXLiveManager.h; sourceTree = "<group>"; };
+		8E8B373619E134450053B1F1 /* QXLiveManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QXLiveManager.m; sourceTree = "<group>"; };
+		8E8B373719E134450053B1F1 /* HttpAsynchronousRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpAsynchronousRequest.h; sourceTree = "<group>"; };
+		8E8B373819E134450053B1F1 /* HttpAsynchronousRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpAsynchronousRequest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +89,20 @@
 			isa = PBXGroup;
 			children = (
 				8E8B371719E1343B0053B1F1 /* QXCameraKit.h */,
+				8E8B373119E134450053B1F1 /* QXAPI.h */,
+				8E8B373219E134450053B1F1 /* QXAPI.m */,
+				8E8B373319E134450053B1F1 /* QXAPIManager.h */,
+				8E8B373419E134450053B1F1 /* QXAPIManager.m */,
+				8E8B373519E134450053B1F1 /* QXLiveManager.h */,
+				8E8B373619E134450053B1F1 /* QXLiveManager.m */,
+				8E8B372D19E134450053B1F1 /* QXXMLParser.h */,
+				8E8B372E19E134450053B1F1 /* QXXMLParser.m */,
+				8E8B372F19E134450053B1F1 /* QXDevice.h */,
+				8E8B373019E134450053B1F1 /* QXDevice.m */,
+				8E8B372B19E134450053B1F1 /* UdpRequest.h */,
+				8E8B372C19E134450053B1F1 /* UdpRequest.m */,
+				8E8B373719E134450053B1F1 /* HttpAsynchronousRequest.h */,
+				8E8B373819E134450053B1F1 /* HttpAsynchronousRequest.m */,
 				8E8B371519E1343B0053B1F1 /* Supporting Files */,
 			);
 			path = QXCameraKit;
@@ -68,6 +111,7 @@
 		8E8B371519E1343B0053B1F1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8E6F633B19E2D4CC0034F076 /* README.md */,
 				8E8B371619E1343B0053B1F1 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -97,7 +141,14 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E8B374119E134450053B1F1 /* QXAPIManager.h in Headers */,
+				8E8B373919E134450053B1F1 /* UdpRequest.h in Headers */,
+				8E8B373D19E134450053B1F1 /* QXDevice.h in Headers */,
+				8E8B373F19E134450053B1F1 /* QXAPI.h in Headers */,
+				8E8B374519E134450053B1F1 /* HttpAsynchronousRequest.h in Headers */,
+				8E8B373B19E134450053B1F1 /* QXXMLParser.h in Headers */,
 				8E8B371819E1343B0053B1F1 /* QXCameraKit.h in Headers */,
+				8E8B374319E134450053B1F1 /* QXLiveManager.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,6 +247,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E8B373A19E134450053B1F1 /* UdpRequest.m in Sources */,
+				8E8B374019E134450053B1F1 /* QXAPI.m in Sources */,
+				8E8B374419E134450053B1F1 /* QXLiveManager.m in Sources */,
+				8E8B373E19E134450053B1F1 /* QXDevice.m in Sources */,
+				8E8B373C19E134450053B1F1 /* QXXMLParser.m in Sources */,
+				8E8B374219E134450053B1F1 /* QXAPIManager.m in Sources */,
+				8E8B374619E134450053B1F1 /* HttpAsynchronousRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,6 +355,7 @@
 		8E8B372619E1343B0053B1F1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -306,12 +365,14 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Debug;
 		};
 		8E8B372719E1343B0053B1F1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -319,8 +380,10 @@
 				INFOPLIST_FILE = QXCameraKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Release;
 		};
@@ -373,6 +436,7 @@
 				8E8B372719E1343B0053B1F1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8E8B372819E1343B0053B1F1 /* Build configuration list for PBXNativeTarget "QXCameraKitTests" */ = {
 			isa = XCConfigurationList;
@@ -381,6 +445,7 @@
 				8E8B372A19E1343B0053B1F1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
