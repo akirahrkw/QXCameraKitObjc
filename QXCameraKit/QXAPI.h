@@ -76,8 +76,8 @@ typedef void (^APIResponseBlock)(NSDictionary *json, BOOL isSucceeded);
 - (void)actTakePictureWithAPIResponseBlock:(APIResponseBlock)block;
 
 // TouchAFPosition methods
-- (void)setTouchAFPosition:(int)x y:(int)y block:(APIResponseBlock)block;
-- (void)getTouchAFPosition:(int)x y:(int)y block:(APIResponseBlock)block;
-- (void)cancelTouchAFPosition:(int)x y:(int)y block:(APIResponseBlock)block;
+- (void)setTouchAFPosition:(double)x y:(double)y block:(APIResponseBlock)block;
+- (void)getTouchAFPositionWithAPIResponseBlock:(APIResponseBlock)block;
+- (void)cancelTouchAFPositionWithAPIResponseBlock:(APIResponseBlock)block;
 
 @end

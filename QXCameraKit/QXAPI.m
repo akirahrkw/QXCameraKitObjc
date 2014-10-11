@@ -99,18 +99,18 @@
 }
 
 #pragma mark TouchAF methods
-- (void)setTouchAFPosition:(int)x y:(int)y block:(APIResponseBlock)block {
-    NSString *params = [NSString stringWithFormat:@"[%i, %i]", x , y];
+- (void)setTouchAFPosition:(double)x y:(double)y block:(APIResponseBlock)block {
+    NSString *params = [NSString stringWithFormat:@"[%f, %f]", x , y];
     NSString *requestJson = [self createRequestJson:APISetTouchAfPosition params:params];
     [self createCameraAsynchronousRequest:APISetTouchAfPosition params:requestJson block:block];
 }
 
-- (void)getTouchAFPosition:(int)x y:(int)y block:(APIResponseBlock)block {
+- (void)getTouchAFPositionWithAPIResponseBlock:(APIResponseBlock)block {
     NSString *requestJson = [self createRequestJson:APIGetTouchAfPosition params:@"[]"];
     [self createCameraAsynchronousRequest:APIGetTouchAfPosition params:requestJson block:block];
 }
 
-- (void)cancelTouchAFPosition:(int)x y:(int)y block:(APIResponseBlock)block {
+- (void)cancelTouchAFPositionWithAPIResponseBlock:(APIResponseBlock)block {
     NSString *requestJson = [self createRequestJson:APICancelTouchAfPosition params:@"[]"];
     [self createCameraAsynchronousRequest:APICancelTouchAfPosition params:requestJson block:block];
 }
