@@ -98,6 +98,16 @@
     [self createCameraAsynchronousRequest:APIActTakePicture params:requestJson block:block];
 }
 
+#pragma mark HalfPress methods
+- (void)actHalfPressShutterWithAPIResponseBlock:(APIResponseBlock)block {
+    NSString *requestJson = [self createRequestJson:APIActHalfPressShutter params:@"[]"];
+    [self createCameraAsynchronousRequest:APIActHalfPressShutter params:requestJson block:block];
+}
+- (void)cancelHalfPressShutterWithAPIResponseBlock:(APIResponseBlock)block {
+    NSString *requestJson = [self createRequestJson:APICancelHalfPressShutter params:@"[]"];
+    [self createCameraAsynchronousRequest:APICancelHalfPressShutter params:requestJson block:block];
+}
+
 #pragma mark TouchAF methods
 - (void)setTouchAFPosition:(double)x y:(double)y block:(APIResponseBlock)block {
     NSString *params = [NSString stringWithFormat:@"[%f, %f]", x , y];
@@ -113,6 +123,72 @@
 - (void)cancelTouchAFPositionWithAPIResponseBlock:(APIResponseBlock)block {
     NSString *requestJson = [self createRequestJson:APICancelTouchAfPosition params:@"[]"];
     [self createCameraAsynchronousRequest:APICancelTouchAfPosition params:requestJson block:block];
+}
+
+#pragma mark ExposureMode methods
+- (void)setExposureMode:(NSString *)mode block:(APIResponseBlock)block {
+    NSString *params = [NSString stringWithFormat:@"[\"%@\"]", mode];
+    NSString *requestJson = [self createRequestJson:APISetExposureMode params:params];
+    [self createCameraAsynchronousRequest:APISetExposureMode params:requestJson block:block];
+}
+
+- (void)getExposureModeWithAPIResponseBlock:(APIResponseBlock)block {
+    NSString *requestJson = [self createRequestJson:APIGetExposureMode params:@"[]"];
+    [self createCameraAsynchronousRequest:APIGetExposureMode params:requestJson block:block];
+}
+
+- (void)getSupportedExposureModeWithAPIResponseBlock:(APIResponseBlock)block {
+    NSString *requestJson = [self createRequestJson:APIGetSupportedExposureMode params:@"[]"];
+    [self createCameraAsynchronousRequest:APIGetSupportedExposureMode params:requestJson block:block];
+}
+
+- (void)getAvailableExposureModeWithAPIResponseBlock:(APIResponseBlock)block {
+    NSString *requestJson = [self createRequestJson:APIGetAvailableExposureMode params:@"[]"];
+    [self createCameraAsynchronousRequest:APIGetAvailableExposureMode params:requestJson block:block];
+}
+
+#pragma mark IsoSpeedRate methods
+- (void)setIsoSpeedRate:(NSString *)rate block:(APIResponseBlock)block {
+    NSString *params = [NSString stringWithFormat:@"[\"%@\"]", rate];
+    NSString *requestJson = [self createRequestJson:APISetIsoSpeedRate params:params];
+    [self createCameraAsynchronousRequest:APISetIsoSpeedRate params:requestJson block:block];
+}
+
+- (void)getIsoSpeedRateWithAPIResponseBlock:(APIResponseBlock)block {
+    NSString *requestJson = [self createRequestJson:APIGetIsoSpeedRate params:@"[]"];
+    [self createCameraAsynchronousRequest:APIGetIsoSpeedRate params:requestJson block:block];
+}
+
+- (void)getSupportedIsoSpeedRateWithAPIResponseBlock:(APIResponseBlock)block {
+    NSString *requestJson = [self createRequestJson:APIGetSupportedIsoSpeedRate params:@"[]"];
+    [self createCameraAsynchronousRequest:APIGetSupportedIsoSpeedRate params:requestJson block:block];
+}
+
+- (void)getAvailableIsoSpeedRateWithAPIResponseBlock:(APIResponseBlock)block {
+    NSString *requestJson = [self createRequestJson:APIGetAvailableIsoSpeedRate params:@"[]"];
+    [self createCameraAsynchronousRequest:APIGetAvailableIsoSpeedRate params:requestJson block:block];
+}
+
+#pragma mark WhiteBalance methods
+- (void)setWhiteBalance:(NSString *)balance block:(APIResponseBlock)block {
+    NSString *params = [NSString stringWithFormat:@"[\"%@\"]", balance];
+    NSString *requestJson = [self createRequestJson:APISetWhiteBalance params:params];
+    [self createCameraAsynchronousRequest:APISetWhiteBalance params:requestJson block:block];
+}
+
+- (void)getWhiteBalanceWithAPIResponseBlock:(APIResponseBlock)block {
+    NSString *requestJson = [self createRequestJson:APIGetWhiteBalance params:@"[]"];
+    [self createCameraAsynchronousRequest:APIGetWhiteBalance params:requestJson block:block];
+}
+
+- (void)getSupportedWhiteBalanceWithAPIResponseBlock:(APIResponseBlock)block {
+    NSString *requestJson = [self createRequestJson:APIGetSupportedWhiteBalance params:@"[]"];
+    [self createCameraAsynchronousRequest:APIGetSupportedWhiteBalance params:requestJson block:block];
+}
+
+- (void)getAvailableWhiteBalanceWithAPIResponseBlock:(APIResponseBlock)block {
+    NSString *requestJson = [self createRequestJson:APIGetAvailableWhiteBalance params:@"[]"];
+    [self createCameraAsynchronousRequest:APIGetAvailableWhiteBalance params:requestJson block:block];
 }
 
 #pragma mark Shoot methods
@@ -135,17 +211,6 @@
 - (void)getAvailableShootMode {
     NSString *requestJson = [self createRequestJson:APIGetAvailableShootMode params:@"[]"];
     [self createCameraAsynchronousRequest:APIGetAvailableShootMode params:requestJson];
-}
-
-#pragma mark HalfPress methods
-- (void)actHalfPressShutter {
-    NSString *requestJson = [self createRequestJson:APIActHalfPressShutter params:@"[]"];
-    [self createCameraAsynchronousRequest:APIActHalfPressShutter params:requestJson];
-}
-
-- (void)cancelHalfPressShutter {
-    NSString *requestJson = [self createRequestJson:APICancelHalfPressShutter params:@"[]"];
-    [self createCameraAsynchronousRequest:APICancelHalfPressShutter params:requestJson];
 }
 
 #pragma mark LiveView methods

@@ -35,6 +35,24 @@ static NSString *APISetTouchAfPosition = @"setTouchAFPosition";
 static NSString *APIGetTouchAfPosition = @"getTouchAFPosition";
 static NSString *APICancelTouchAfPosition = @"cancelTouchAFPosition";
 
+//exposure mode api
+static NSString *APISetExposureMode = @"setExposureMode";
+static NSString *APIGetExposureMode = @"getExposureMode";
+static NSString *APIGetSupportedExposureMode = @"getSupportedExposureMode";
+static NSString *APIGetAvailableExposureMode = @"getAvailableExposureMode";
+
+//iso spped rate api
+static NSString *APISetIsoSpeedRate = @"setIsoSpeedRate";
+static NSString *APIGetIsoSpeedRate = @"getIsoSpeedRate";
+static NSString *APIGetSupportedIsoSpeedRate = @"getSupportedIsoSpeedRate";
+static NSString *APIGetAvailableIsoSpeedRate = @"getAvailableIsoSpeedRate";
+
+//white balance api
+static NSString *APISetWhiteBalance = @"setWhiteBalance";
+static NSString *APIGetWhiteBalance = @"getWhiteBalance";
+static NSString *APIGetSupportedWhiteBalance = @"getSupportedWhiteBalance";
+static NSString *APIGetAvailableWhiteBalance = @"getAvailableWhiteBalance";
+
 //postview api
 static NSString *APIGetPostviewImageSize= @"getPostviewImageSize";
 static NSString *APISetPostviewImageSize= @"setPostviewImageSize";
@@ -74,6 +92,28 @@ typedef void (^APIResponseBlock)(NSDictionary *json, BOOL isSucceeded);
 
 // Picture methods
 - (void)actTakePictureWithAPIResponseBlock:(APIResponseBlock)block;
+
+// Half-Press Shutter methods
+- (void)actHalfPressShutterWithAPIResponseBlock:(APIResponseBlock)block;
+- (void)cancelHalfPressShutterWithAPIResponseBlock:(APIResponseBlock)block;
+
+// ExposureMode methods
+- (void)setExposureMode:(NSString *)mode block:(APIResponseBlock)block;
+- (void)getExposureModeWithAPIResponseBlock:(APIResponseBlock)block;
+- (void)getSupportedExposureModeWithAPIResponseBlock:(APIResponseBlock)block;
+- (void)getAvailableExposureModeWithAPIResponseBlock:(APIResponseBlock)block;
+
+// ISO Speed rate methods
+- (void)setIsoSpeedRate:(NSString *)rate block:(APIResponseBlock)block;
+- (void)getIsoSpeedRateWithAPIResponseBlock:(APIResponseBlock)block;
+- (void)getSupportedIsoSpeedRateWithAPIResponseBlock:(APIResponseBlock)block;
+- (void)getAvailableIsoSpeedRateWithAPIResponseBlock:(APIResponseBlock)block;
+
+// White Balance methods
+- (void)setWhiteBalance:(NSString *)balance block:(APIResponseBlock)block;
+- (void)getWhiteBalanceWithAPIResponseBlock:(APIResponseBlock)block;
+- (void)getSupportedWhiteBalanceWithAPIResponseBlock:(APIResponseBlock)block;
+- (void)getAvailableWhiteBalanceWithAPIResponseBlock:(APIResponseBlock)block;
 
 // TouchAFPosition methods
 - (void)setTouchAFPosition:(double)x y:(double)y block:(APIResponseBlock)block;
