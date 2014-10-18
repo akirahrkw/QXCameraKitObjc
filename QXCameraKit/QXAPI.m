@@ -26,6 +26,7 @@
     return self;
 }
 
+#pragma mark ServerInformation methods
 - (NSData *)getAvailableApiList {
     NSString *url = [_device findActionListUrl:@"camera"];
     NSString *requestJson = [self createRequestJson:APIGetAvailableApiList];
@@ -36,6 +37,17 @@
     NSString *url = [_device findActionListUrl:@"camera"];
     NSString *requestJson = [self createRequestJson:APIGetApplicationInfo];
     return [self call:url postParams:requestJson];
+}
+
+- (void)getVersions:(APIResponseBlock)block {
+    NSString *requestJson = [self createRequestJson:APIGetVersions params:@"[]"];
+    [self createCameraAsynchronousRequest:APIGetVersions params:requestJson block:block];
+}
+
+- (void)getMethodTypes:(NSString *)version block:(APIResponseBlock)block {
+    NSString *params = [NSString stringWithFormat:@"[\"%@\"]", version];
+    NSString *requestJson = [self createRequestJson:APIGetMethodTypes params:params];
+    [self createCameraAsynchronousRequest:APIGetMethodTypes params:requestJson block:block];
 }
 
 - (void)getEvent:(BOOL)longPolling block:(APIResponseBlock)block {

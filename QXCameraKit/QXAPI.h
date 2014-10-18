@@ -10,9 +10,12 @@
 #import "QXDevice.h"
 
 ////////////// API list
+//server information
 static NSString* APIGetAvailableApiList = @"getAvailableApiList";
 static NSString* APIGetApplicationInfo = @"getApplicationInfo";
 static NSString* APIGetEvent = @"getEvent";
+static NSString* APIGetVersions = @"getVersions";
+static NSString* APIGetMethodTypes = @"getMethodTypes";
 
 //shoot api
 static NSString* APIGetShootMode = @"getShootMode";
@@ -72,11 +75,13 @@ typedef void (^APIResponseBlock)(NSDictionary *json, BOOL isSucceeded);
 
 - (id)initWithDevice:(QXDevice *)device;
 
+// Server Information
 - (NSData *)getAvailableApiList;
 - (NSData *)getApplicationInfo;
-- (NSData *)startLiveView;
-
+- (void)getVersions:(APIResponseBlock)block;
+- (void)getMethodTypes:(NSString *)version block:(APIResponseBlock)block;
 - (void)getEvent:(BOOL)longPolling block:(APIResponseBlock)block;
+- (NSData *)startLiveView;
 
 // Zoom methods
 - (void)startZoomInWithAPIResponseBlock:(APIResponseBlock)block;
