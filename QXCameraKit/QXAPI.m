@@ -82,6 +82,27 @@
     [self createCameraAsynchronousRequest:APIActZoom params:requestJson block:block];
 }
 
+#pragma mark StillSize methods
+- (void)getSupportedStillSizeWithAPIResponseBlock:(APIResponseBlock)block {
+    NSString *requestJson = [self createRequestJson:APIGetSupportedStillSize params:@"[]"];
+    [self createCameraAsynchronousRequest:APIGetSupportedStillSize params:requestJson block:block];
+}
+
+- (void)getAvailableStillSizeWithAPIResponseBlock:(APIResponseBlock)block {
+    NSString *requestJson = [self createRequestJson:APIGetAvailableStillSize params:@"[]"];
+    [self createCameraAsynchronousRequest:APIGetAvailableStillSize params:requestJson block:block];
+}
+
+- (void)getStillSizeWithAPIResponseBlock:(APIResponseBlock)block {
+    NSString *requestJson = [self createRequestJson:APIGetStillSize params:@"[]"];
+    [self createCameraAsynchronousRequest:APIGetStillSize params:requestJson block:block];
+}
+- (void)setStillSize:(NSString *)aspect size:(NSString *)size block:(APIResponseBlock)block {
+    NSString *params = [NSString stringWithFormat:@"[\"%@\",\"%@\"]", aspect ,size];
+    NSString *requestJson = [self createRequestJson:APISetStillSize params:params];
+    [self createCameraAsynchronousRequest:APISetStillSize params:requestJson block:block];
+}
+
 #pragma mark PostView methods
 - (void)getSupportedPostviewImageSizeWithAPIResponseBlock:(APIResponseBlock)block {
     NSString *requestJson = [self createRequestJson:APIGetSupportedPostviewImageSize params:@"[]"];

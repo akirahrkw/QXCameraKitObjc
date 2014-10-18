@@ -56,6 +56,12 @@ static NSString *APIGetWhiteBalance = @"getWhiteBalance";
 static NSString *APIGetSupportedWhiteBalance = @"getSupportedWhiteBalance";
 static NSString *APIGetAvailableWhiteBalance = @"getAvailableWhiteBalance";
 
+//still size api
+static NSString *APIGetStillSize = @"getStillSize";
+static NSString *APISetStillSize = @"setStillSize";
+static NSString *APIGetSupportedStillSize = @"getSupportedStillSize";
+static NSString *APIGetAvailableStillSize = @"getAvailableStillSize";
+
 //postview api
 static NSString *APIGetPostviewImageSize = @"getPostviewImageSize";
 static NSString *APISetPostviewImageSize = @"setPostviewImageSize";
@@ -96,7 +102,13 @@ typedef void (^APIResponseBlock)(NSDictionary *json, BOOL isSucceeded);
 - (void)startZoomOutWithAPIResponseBlock:(APIResponseBlock)block;
 - (void)stopZoomOutWithAPIResponseBlock:(APIResponseBlock)block;
 
-//postview methods
+// StillSize methods
+- (void)getSupportedStillSizeWithAPIResponseBlock:(APIResponseBlock)block;
+- (void)getAvailableStillSizeWithAPIResponseBlock:(APIResponseBlock)block;
+- (void)getStillSizeWithAPIResponseBlock:(APIResponseBlock)block;
+- (void)setStillSize:(NSString *)aspect size:(NSString *)size block:(APIResponseBlock)block;
+
+// Postview methods
 - (void)getSupportedPostviewImageSizeWithAPIResponseBlock:(APIResponseBlock)block;
 - (void)getAvailableImageSizeWithAPIResponseBlock:(APIResponseBlock)block;
 - (void)getPostviewImageSizeWithAPIResponseBlock:(APIResponseBlock)block;
