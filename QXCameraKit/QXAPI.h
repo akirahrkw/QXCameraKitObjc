@@ -57,10 +57,17 @@ static NSString *APIGetSupportedWhiteBalance = @"getSupportedWhiteBalance";
 static NSString *APIGetAvailableWhiteBalance = @"getAvailableWhiteBalance";
 
 //postview api
-static NSString *APIGetPostviewImageSize= @"getPostviewImageSize";
-static NSString *APISetPostviewImageSize= @"setPostviewImageSize";
-static NSString *APIGetSupportedPostviewImageSize= @"getSupportedPostviewImageSize";
-static NSString *APIGetAvailablePostviewImageSize= @"getAvailablePostviewImageSize";
+static NSString *APIGetPostviewImageSize = @"getPostviewImageSize";
+static NSString *APISetPostviewImageSize = @"setPostviewImageSize";
+static NSString *APIGetSupportedPostviewImageSize = @"getSupportedPostviewImageSize";
+static NSString *APIGetAvailablePostviewImageSize = @"getAvailablePostviewImageSize";
+
+//beepmode api
+static NSString *APIGetBeepMode = @"getBeepMode";
+static NSString *APISetBeepMode = @"setBeepMode";
+static NSString *APIGetSupportedBeepMode = @"getSupportedBeepMode";
+static NSString *APIGetAvailableBeepMode = @"getAvailableBeepMode";
+
 //////////////
 
 @protocol QXAPIDelegate <NSObject>
@@ -124,5 +131,11 @@ typedef void (^APIResponseBlock)(NSDictionary *json, BOOL isSucceeded);
 - (void)setTouchAFPosition:(double)x y:(double)y block:(APIResponseBlock)block;
 - (void)getTouchAFPositionWithAPIResponseBlock:(APIResponseBlock)block;
 - (void)cancelTouchAFPositionWithAPIResponseBlock:(APIResponseBlock)block;
+
+// BeepMode methods
+- (void)getBeepModeWithAPIResponseBlock:(APIResponseBlock)block;
+- (void)setBeepMode:(NSString *)mode block:(APIResponseBlock)block;
+- (void)getSupportedBeepModeWithAPIResponseBlock:(APIResponseBlock)block;
+- (void)getAvailableBeepModeWithAPIResponseBlock:(APIResponseBlock)block;
 
 @end

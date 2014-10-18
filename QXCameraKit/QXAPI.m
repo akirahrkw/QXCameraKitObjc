@@ -237,6 +237,26 @@
     [self createCameraAsynchronousRequest:APIStopLiveview params:requestJson];
 }
 
+#pragma mark BeepMode methods
+- (void)getBeepModeWithAPIResponseBlock:(APIResponseBlock)block {
+    NSString *requestJson = [self createRequestJson:APIGetBeepMode params:@"[]"];
+    [self createCameraAsynchronousRequest:APIGetBeepMode params:requestJson block:block];
+}
+
+- (void)setBeepMode:(NSString *)mode block:(APIResponseBlock)block {
+    NSString *params = [NSString stringWithFormat:@"[\"%@\"]", mode];
+    NSString *requestJson = [self createRequestJson:APISetBeepMode params:params];
+    [self createCameraAsynchronousRequest:APISetBeepMode params:requestJson block:block];
+}
+- (void)getSupportedBeepModeWithAPIResponseBlock:(APIResponseBlock)block {
+    NSString *requestJson = [self createRequestJson:APIGetSupportedBeepMode params:@"[]"];
+    [self createCameraAsynchronousRequest:APIGetSupportedBeepMode params:requestJson block:block];
+}
+- (void)getAvailableBeepModeWithAPIResponseBlock:(APIResponseBlock)block {
+    NSString *requestJson = [self createRequestJson:APIGetAvailableBeepMode params:@"[]"];
+    [self createCameraAsynchronousRequest:APIGetAvailableBeepMode params:requestJson block:block];
+}
+
 #pragma mark Private methods
 - (int)getId {
     return _qxid++;
